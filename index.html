@@ -1,7 +1,389 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>Hexo</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>John Doe</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
 
-block content
-  include ./includes/mixins/post-ui.pug
-  #recent-posts.recent-posts
-    +postUI
-    include includes/pagination.pug
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2020/10/">October 2020<span class="archive-count">4</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<div class="post-header" style="background-image:url(/images/coverpic.png);background-color:#26A69A ">
+    <a  href="http://example.com"  >
+        <div class="post-header-title">
+            <p style="">
+                
+                
+                你好 欢迎来到本站
+                
+                
+                <br>
+                
+            </p>
+        </div>
+    </a>
+</div>
+<div class="post-author">
+    <div class="post-author-img"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p class="post-author-name">John Doe</p>
+    <div class="post-author-button"  target="_self"><i class="material-icons"  target="_self" style="font-size: 20px">share</i></div>
+    <div class="post-author-link"><ul>
+            <p>分享到：</p>
+            <li><a href="http://v.t.sina.com.cn/share/share.php?url=http://example.com&title=Hexo" target="_blank">新浪微博</a></li>
+            <li><a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com" target="_blank">QQ空间</a></li>
+            <li><a href="http://connect.qq.com/widget/shareqq/index.html?title=qqhaoyou&url=http://example.com &desc= Hexo" target="_blank">QQ好友</a></li>
+        </ul></div>
+</div>
+
+
+<div id="recent-posts">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+      <div class="recent-post-item lazy"style="background-color:#26A69A"  data-original="/images/random/vateral-2.png"  >
+        <a class="recent-post-link" href="/2020/10/30/我的第二章博博客/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2020/10/30/我的第二章博博客/" >我的第二章博博客</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2020-10-30T11:16:53.000Z">
+              2020-10-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+              暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+                暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2020/10/30/我的第二章博博客/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+    
+  
+    
+      <div class="recent-post-item lazy"style="background-color:#26A69A"  data-original="/images/random/vateral-11.png"  >
+        <a class="recent-post-link" href="/2020/10/30/vue/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2020/10/30/vue/" >VUE</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2020-10-30T11:13:59.000Z">
+              2020-10-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+              暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+                暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                vue这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。
+这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。
+在这篇文章里...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2020/10/30/vue/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+    
+  
+    
+      <div class="recent-post-item lazy"style="background-color:#26A69A"  data-original="/images/random/vateral-16.png"  >
+        <a class="recent-post-link" href="/2020/10/30/我个人博客的第一页/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2020/10/30/我个人博客的第一页/" >VUE学习</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2020-10-30T11:13:59.000Z">
+              2020-10-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+              暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+                暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。
+这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。
+在这篇文章里学到很多以前忽略的地方:
+开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2020/10/30/我个人博客的第一页/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+    
+  
+    
+      <div class="recent-post-item lazy"style="background-color:#26A69A"  data-original="/images/random/vateral-6.png"  >
+        <a class="recent-post-link" href="/2020/10/30/hello-world/">
+        <div class="post-hover">
+          <!--title-->
+          <p class="post-title"><a href="/2020/10/30/hello-world/" >Hello World</a></p>
+
+          <!--date-->
+          
+            <p class="post-time">John Doe &nbsp &nbsp 发布于:<time datetime="2020-10-30T10:37:28.596Z">
+              2020-10-30
+            </time>
+            </p>
+          
+
+          <!--tags-->
+
+          标签:
+            
+              暂无标签
+            
+          <!--分类-->
+
+          分类:
+            
+                暂无分类
+            
+
+          <!--excerpt-->
+          <div class="post-excerpt">
+            <p>
+              摘要：
+              
+                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems w...
+              
+            </p>
+          </div>
+          <div class="post-more"><a href="/2020/10/30/hello-world/" >全文阅读</a></div>
+        </div>
+        </a>
+      </div>
+    
+  
+  <nav class="paging">
+    <span class="page-number current">1</span>
+</nav>
+</div>
+
+
+
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Hexo</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
