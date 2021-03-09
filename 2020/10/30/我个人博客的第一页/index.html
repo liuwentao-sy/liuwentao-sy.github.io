@@ -1,228 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  
-  <meta name="keywords" content="网站关键字">
-  <meta name="description" content="网站简介">
-  
-  <title>Hexo</title>
-  
-    <!-- stylesheets list from config.yml -->
-    
-      <link rel="stylesheet" href="/css/materialize.min.css">
-    
-      <link rel="stylesheet" href="/css/main.min.css">
-    
-  
-  <style type="text/css">
-      html{
-          font-family: sans-serif;
-          font-weight: 300;
-      }
-      @font-face {
-          font-family: 'Material Icons';
-          font-style: normal;
-          font-weight: 400;
-          src: url(/fonts/MaterialIcons-Regular.eot);
-          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
-          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
-          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
-      }
-  </style>
-<link rel="shortcut icon" href="/source/favicon.ico">
-<meta name="generator" content="Hexo 5.2.0"></head>
-<body>
-<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
-<div id="menu-outer">
-  <div id="menu-inner">
-      <ul id="slide-out" class="side-nav" >
-    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
-    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
-    <p>John Doe</p>
-    <div class="nav-link">
+extends includes/layout.pug
+
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
+
+    article#article-container.post-content!=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
         
-        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
-        
-        
-        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
-        
-        
-        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
-        
-        
-        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
-        
-        
-        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
-        
-    </div>
-    <div class="nav-search">
-        <form id="search-form"> <!-- 搜索框相关 -->
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
-            <div class="nav-search-img"><i class="material-icons">search</i></div>
-        </form>
-        <div id="local-search-result"></div> <!-- 搜索结果区 -->
-        <p class='no-result'>无搜索结果</p>
-    </div>
-</div>
-    <!--Homepage-->
+    if theme.reward.enable
+      !=partial('includes/post/reward', {}, {cache: true})
 
-<li class="nav-list">
-    <a href="/" target="_self">
-        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
-    </a>
-</li>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-<!--archives-->
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-<li class="nav-list dropdown-btn">
-    <a  class=""  target="_self">
-        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
-    </a>
-</li>
-
-<ul class="dropdown-menu dropdown" >
-    <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2020/10/">October 2020<span class="archive-count">4</span></a>
-    </li>
-</ul>
-<!--categories-->
-
-<ul class="dropdown-menu dropdown" >
-    <li class="nav-dropdown-list">
-        
-    </li>
-</ul>
-<!--tags-->
-
-<li class="nav-list">
-    <a href="/archives" target="_self">
-        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
-    </a>
-</li>
-
-<!--photo-->
-
-<!--friends-->
-
-<!--about-->
-
-
-</ul>
-
-  </div>
-</div>
-
-<div id="content-outer">
-  <div id="content-inner">
-    
-<article id="post">
-  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-14.png)" >
-  <h2>VUE学习</h2>
-    
-  <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2020-10-30T11:13:59.000Z">
-          2020-10-30
-    </time>
-  </p>
-    
-  </div>
-  <div class="post-page-content">
-  <p>这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。</p>
-<p>这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。</p>
-<p>在这篇文章里学到很多以前忽略的地方:</p>
-<p>开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽略了vue的两种构建模式，既是使用默认的运行时构建。<br>从vue官网里，可以很清楚的了解，vue存在两种构建模式，运行构建和独立构建。他们的区别在于独立构建包含模板编译，而运行构建不含模板编译。</p>
-<p>那么问题来了，在项目那么多组件里，每个组件都有template选项，既然运行时构建不含模板编译, 那是怎么项目是怎么运行起来，难道我是使用了假的vue？？</p>
-<p>来看看官网的说明：</p>
-<p>运行时构建不含模板编译器，因此不支持template选项，只能用render选项，但即使使用运行时构建，在单文件组件中也依然可以写模板，因为单文件组件的模板在构建时预编译为render函数。</p>
-<p>瞬间明白了，原来是render函数，一个考验JavaScript编程能力的函数，比template更接近编译器。</p>
-<p>那么问题又来了，render函数与template有什么关系？</p>
-<p>render 函数、 template 属性以及 el属性。<br>分享的这篇文章有一点总结的很好：</p>
-<p>当Vue选项对象中有render渲染函数时，Vue构造函数将直接使用渲染函数渲染DOM树，当选项对象中没有render渲染函数时，Vue构造函数首先通过将template模板生成render函数，然后再渲染DOM树，而当选项对象中既没有render渲染函数，也没有template模板时，会通过el属性获取挂载元素的outerHTML来作为模板，并编译生成渲染函数。</p>
-<p>似曾相识的几句话……</p>
-<p>Vue官网API搜索template：</p>
-<p>这里最后一句话，如果Vue选项中包含render函数，template选项将被忽略，也就是说在渲染DOM树时render函数的优先级 大于 template选项。</p>
-<p>意思也是在进行DOM渲染的时候，render函数优先级最高，template和el次之。</p>
-<p>这里有一个小知识点被忽略： 在实例挂载之后，元素可以用vm.$el访问（脑补会用到的场景中。。。）</p>
-<p>最后一条信息里：</p>
-<p>如果render函数和template属性都不存在，挂在DOM元素的HTML会被提取出来用作模板，此时，必须使用Runtime + Compiler构建的Vue库。</p>
-<p>也就是说： 在进行DOM树渲染时，render渲染函数的优先级最高，template次之且需要编译成渲染函数，在前两者均不存在时，挂载DOM元素的outerHTML会被提取出来用作模板。</p>
-<p>当然，构建Vue实例时，可以不含有render, template, el三者中任何一个。</p>
-
-  </div>
-  <!--评论块-->
-    
-
-</article>
-<nav class="post-nav">
-  <!-- Prev Nav -->
-    
-  <a href="/2020/10/30/vue/" id="post_nav-newer" class="post-nav-content prev-content">
-      新篇
-  </a>
-    
-
-
-  <!-- Next Nav -->
-    
-  <a href="/2020/10/30/hello-world/" id="post_nav-older" class="post-nav-content next-content">
-      旧篇
-  </a>
-    
-</nav>
-<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
-<div class="post-toc-none"><p>(无)</p></div>
-<div class="post-toc-box">
-    
-</div>
-<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
-<script type="text/javascript">
-    menu();
-</script>
-  </div>
-</div>
-<div id="bottom-outer">
-  <div id="bottom-inner">
-    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
-
-
-<p style="line-height: 45px">Copyright ©  2017  Hexo</p>
-<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
-
-  </div>
-</div>
-
-<!--影集界面需要的资源-->
-
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="/js/jquery-3.1.1.min.js"></script>
-
-<script src="/js/materialize.min.js"></script>
-
-<script src="/js/main.min.js"></script>
-
-
-<script>
-    NProgress.start();
-    NProgress.done();
-    lazy();
-    links();
-    window.onpopstate = menu();
-    //pjax操作
-    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
-    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
-        .on('pjax:end', () => {
-            dowmdiv();
-            lazy();
-            toc();
-            links();
-            menu();
-        });
-</script>
-
-</body>
-</html>
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
+      
