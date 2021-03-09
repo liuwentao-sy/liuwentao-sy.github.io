@@ -119,7 +119,7 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-10.png)" >
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-14.png)" >
   <h2>VUE学习</h2>
     
   <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2020-10-30T11:13:59.000Z">
@@ -129,7 +129,27 @@
     
   </div>
   <div class="post-page-content">
-  
+  <p>这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。</p>
+<p>这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。</p>
+<p>在这篇文章里学到很多以前忽略的地方:</p>
+<p>开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽略了vue的两种构建模式，既是使用默认的运行时构建。<br>从vue官网里，可以很清楚的了解，vue存在两种构建模式，运行构建和独立构建。他们的区别在于独立构建包含模板编译，而运行构建不含模板编译。</p>
+<p>那么问题来了，在项目那么多组件里，每个组件都有template选项，既然运行时构建不含模板编译, 那是怎么项目是怎么运行起来，难道我是使用了假的vue？？</p>
+<p>来看看官网的说明：</p>
+<p>运行时构建不含模板编译器，因此不支持template选项，只能用render选项，但即使使用运行时构建，在单文件组件中也依然可以写模板，因为单文件组件的模板在构建时预编译为render函数。</p>
+<p>瞬间明白了，原来是render函数，一个考验JavaScript编程能力的函数，比template更接近编译器。</p>
+<p>那么问题又来了，render函数与template有什么关系？</p>
+<p>render 函数、 template 属性以及 el属性。<br>分享的这篇文章有一点总结的很好：</p>
+<p>当Vue选项对象中有render渲染函数时，Vue构造函数将直接使用渲染函数渲染DOM树，当选项对象中没有render渲染函数时，Vue构造函数首先通过将template模板生成render函数，然后再渲染DOM树，而当选项对象中既没有render渲染函数，也没有template模板时，会通过el属性获取挂载元素的outerHTML来作为模板，并编译生成渲染函数。</p>
+<p>似曾相识的几句话……</p>
+<p>Vue官网API搜索template：</p>
+<p>这里最后一句话，如果Vue选项中包含render函数，template选项将被忽略，也就是说在渲染DOM树时render函数的优先级 大于 template选项。</p>
+<p>意思也是在进行DOM渲染的时候，render函数优先级最高，template和el次之。</p>
+<p>这里有一个小知识点被忽略： 在实例挂载之后，元素可以用vm.$el访问（脑补会用到的场景中。。。）</p>
+<p>最后一条信息里：</p>
+<p>如果render函数和template属性都不存在，挂在DOM元素的HTML会被提取出来用作模板，此时，必须使用Runtime + Compiler构建的Vue库。</p>
+<p>也就是说： 在进行DOM树渲染时，render渲染函数的优先级最高，template次之且需要编译成渲染函数，在前两者均不存在时，挂载DOM元素的outerHTML会被提取出来用作模板。</p>
+<p>当然，构建Vue实例时，可以不含有render, template, el三者中任何一个。</p>
+
   </div>
   <!--评论块-->
     
