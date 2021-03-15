@@ -1,63 +1,136 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
-    <meta name="referrer" content="origin">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title>[object Object]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>[object Object] | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。 这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。 在这篇文章里学到很多以前忽略的地方: 开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽略了vue的两种构建模式，既是使用默认的运行时构建。从vue官网里，可以很清楚的了解，vue存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[object Object]">
+<meta property="og:url" content="http://example.com/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。 这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。 在这篇文章里学到很多以前忽略的地方: 开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽略了vue的两种构建模式，既是使用默认的运行时构建。从vue官网里，可以很清楚的了解，vue存">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-30T11:13:59.212Z">
+<meta property="article:modified_time" content="2021-03-11T08:32:57.730Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/pintuer.css">
 
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css">
+  
+<link rel="stylesheet" href="/css/style.css">
 
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css">
-    
-        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css">
-    
+  
+<script src="/js/jquery.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js"></script>
+  
+<script src="/js/pintuer.js"></script>
+
+  
 
 <meta name="generator" content="Hexo 5.2.0"></head>
-<body>
-    <a id="cover"></a>
-    <div id="header">
-    <div class="header">
-        <div class="vertical">
-            <div class="inner">
-                <h1 class="header-subtitle">[object Object]</h1>
-                <div class="header-subinfo">
-                    <p class="article-info-text">
-                        <span>
-                            <i class="iconfont icon-time"></i> 发表时间：2020-10-30
-                        </span>
-                        
-                            <span id="/2020/10/30/我个人博客的第一页/" class="leancloud_visitors" data-flag-title="[object Object]">
-                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                            </span>
-                        
-                        <span>
-                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2020/10/30/我个人博客的第一页/"></span>
-                        </span>  
-                    </p>                 
-                </div>
-            </div>
-        </div>
-        <canvas id="articleHeaderCanvas"></canvas>
-    </div>
+
+
+  <body>
+    <div class="layout">
+      <div class="layout bg-gray bg-inverse hidden-l">
+  <div class="container height-big">
+    <span class="float-right">
+        <a href="#" class="win-homepage icon-home">设为首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" class="win-favorite icon-star">加入收藏</a>
+    </span>
+    Hexo
+  </div>
 </div>
-    <div id="container">
-    <div id="content">
-        <div id="article">
-    <div class="toc"></div>
-    <div class="article-body">
-        <p>这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。</p>
+<div class="container padding-big-top padding-big-bottom bg-white">
+  <div class="line">
+    <div class="xl12 xs2 xm2 xb1">
+      <button class="button icon-navicon float-right" data-target="#header-demo2">
+      </button>
+      <img src="/favicon.png" width="50" height="50" />
+    </div>
+    <div class=" xl12 xs10 xm10 xb11 padding-top nav-navicon" id="header-demo2">
+      <div class="xs8 xm8 xb8">
+        <ul class="nav nav-menu nav-inline">
+          
+            <li>
+              <a href="/" class="text-big">
+                <strong>主页</strong>
+              </a>
+            </li>
+            
+            <li>
+              <a href="/archives" class="text-big">
+                <strong>归档</strong>
+              </a>
+            </li>
+            
+              <!-- 
+                      <li><a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a></li>
+                     -->
+        </ul>
+      </div>
+      <div class="xs4 xm4 xb3">
+        <form>
+          <div class="input-group padding-little-top">
+            <input type="text" class="input border-main" name="keywords" size="30" placeholder="关键词" />
+            <span class="addbtn">
+              <button id="search_dialog" type="button" class="button bg-main dialogs" data-toggle="click" data-target="#mydialog" data-mask="1" data-width="50%">
+                搜索</button>
+            </span>
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="keypoint bg-green bg-inverse text-center">
+          <h1>
+            欢迎来到我的博客</h1>
+          <p>
+              嗨，我是姜帅杰 (codeteenager)，一名来自中国的 android/ios/web 开发者。正在修行，探求创意之源。</p>
+          <a class="button button-big bg-blue radius-rounded" href="http://www.github.com/codeteenager" target="_blank">
+            Github
+          </a>
+          <a class="button button-big bg-blue radius-rounded margin-left" href="http://www.jiangshuaijie.com" target="_blank">
+            个人简历
+          </a>
+        </div>
+        <div class="line-big">
+          <div class="xs9">
+            <section class="margin">
+              <article class="margin" itemscope itemprop="blogPost">
+  
+  <div class="panel" style="border-radius:0px">
+    
+      
+        <header class="panel-head">
+          
+  
+    <h3 itemprop="name">
+      [object Object]
+    </h3>
+  
+
+        </header>
+        
+          <div class="panel-body" itemprop="articleBody">
+            
+                      <div class="entry">
+                        <p>这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。</p>
 <p>这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。</p>
 <p>在这篇文章里学到很多以前忽略的地方:</p>
 <p>开始学习vue的时候，由于有一些react基础，对组件的形式有些了解，就直接从vue-cli开始了，忽略了vue的两种构建模式，既是使用默认的运行时构建。<br>从vue官网里，可以很清楚的了解，vue存在两种构建模式，运行构建和独立构建。他们的区别在于独立构建包含模板编译，而运行构建不含模板编译。</p>
@@ -78,586 +151,253 @@
 <p>也就是说： 在进行DOM树渲染时，render渲染函数的优先级最高，template次之且需要编译成渲染函数，在前两者均不存在时，挂载DOM元素的outerHTML会被提取出来用作模板。</p>
 <p>当然，构建Vue实例时，可以不含有render, template, el三者中任何一个。</p>
 
-        <p class="suffix-end">__END__</p>
-        <div class="suffix-box">
-            <div class="suffix-box-left">
-                <img src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg" alt="Live For Code">
-            </div>
-            <div class="suffix-box-right">
-                <span class="suffix-box-title">文章作者</span>：Live For Code
-                <br>
-                <span class="suffix-box-title">文章出处</span>：<a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/" target="_blank">[object Object]</a>
-                <br>
-                <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
-                <br>
-                <span class="suffix-box-title">关于主题</span>：<a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
-                <br>
-                <span class="suffix-box-title">版权声明</span>：文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
-                <br>
-            </div>
-            <div style="clear: both;"></div>
-        </div>
-    </div>
-    <div class="article-footer">
-        
-        
-        <div class="article-prev-next">
-            
-                <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/" class="prev-prefix">« </a> 上一篇：    <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/" title="发布于 2021-03-11 03:49"></a>
-                <br>
-            
-            
-        </div>
-    </div>
-    
-    <div class="article-comments">
-        <div class="comments-title">
-            评论列表
-        </div>
-        <div class="comments-content">
-        </div>
-    </div>
-
-</div>
-
-    </div>
-</div>
-    <div id="footer"></div>
-    <div id="sidebar">
-    <div class="menu-wrap" style="display:none;">
-        <nav class="menu">
-            <div class="menu-introduce"> 
-                <div class="introduce-avatar"></div> 
-                <div class="introduce-info"> 
-                    <div class="introduce-user"><span></span></div>        
-                </div> 
-            </div> 
-            <div class="menu-list">
-                <ul></ul> 
-            </div> 
-            <div class="menu-link"></div> 
-        </nav>
-        <button class="menu-button-close"></button>
-        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
-                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
-            </svg>
-        </div>
-    </div>
-    <button class="menu-button-open">MENU</button>
-    <div class="menu-cover"></div>
-</div>
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js"></script>
-<div class="search-window">
-    <div class="search-content">
-        <div class="search-content-icon">
-            <i class="iconfont icon-search"></i>
-        </div>
-        <div id="search-input" class="search-input"></div>
-    </div>
-
-    <div class="search-scroll">
-        <div class="search-result">
-            <div id="search-stats" class="search-stats"></div>
-            <div id="search-hits"></div>
-            <div id="search-pagination" class="search-pagination"></div>
-        </div>
-    </div>
-
-    <span class="search-close-icon">
-        <i class="iconfont icon-close"></i>
-    </span>
-</div>
-    <div id="tools">
-    <div class="progressbar-top"></div>
-
-    
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js"></script>
-        <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
-    
-    
-    <div class="wrap-right"></div>
-    <div class="loading"></div>
-</div>
-    <script>
-    window.config = {
-        GitHubUserName     : 'first19326',
-        GitHubRepositories : 'Hexo-LiveForCode',
-
-        BlogUser      : 'Live For Code',
-        BlogAvatar    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg',
-        BlogStartDate : '2020-01-01',
-
-        WebsiteTitleBlur         : '(◍´꒳`◍) Hi, Live For Code',
-        WebsiteTitleBlurTimeOut  : 500,
-        WebsiteTitleFocus        : '(*´∇｀*) 欢迎回来!',
-        WebsiteTitleFocusTimeOut : 1000,
-        WebsiteFavicon           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png',
-
-        ProgressBar: {
-            id       : 'topProgressBar',
-            color    : '#77B6FF',
-            height   : '2px',
-            duration : 0.2
-        },
-
-        Loading: {
-            rebound: {
-                tension  : 16,
-                friction : 5
-            },
-            spinner: {
-                id     : 'spinner',
-                radius : 90,
-                sides  : 3,
-                depth  : 4,
-                colors : {
-                    background : '#F0F0F0',
-                    stroke     : '#272633',
-                    base       : '',
-                    child      : '#272633'
-                },
-                alwaysForward : true,
-                restAt        : 0.5,
-                renderBase    : false
-            }
-        },
-
-        HomeHeaderAnimationRendered : true,
-        HomeHeaderAnimation         : {
-            radius      : 15,
-            density     : 0.2,
-            color       : 'rgba(255, 255, 255, .2)',
-            clearOffset : 0.3
-        },
-
-        ArticleHeaderAnimationRendered : false,
-        ArticleHeaderAnimation         : {
-            triW                  : 14,
-            triH                  : 20,
-            neighbours            : [
-                
-                    'side',
-                
-                    'top',
-                
-                    'bottom',
-                
-            ],
-            speedTrailAppear      : 0.1,
-            speedTrailDisappear   : 0.1,
-            speedTriOpen          : 1,
-            trailMaxLength        : 30,
-            trailIntervalCreation : 100,
-            delayBeforeDisappear  : 2,
-            colors                : [
-                
-                    '#96EDA6',
-                
-                    '#5BC6A9',
-                
-                    '#38668C',
-                
-                    '#374D84',
-                
-                    '#BED5CB',
-                
-                    '#62ADC6',
-                
-                    '#8EE5DE',
-                
-                    '#304E7B',
-                
-            ]
-        },
-
-        BackAnimationRendered          : true,
-        IEBrowserBackAnimationRendered : false,
-        BackAnimation                  : {
-            colorSaturation  : '60%',
-            colorBrightness  : '50%',
-            colorAlpha       : 0.5,
-            colorCycleSpeed  : 5,
-            verticalPosition : 'random',
-            horizontalSpeed  : 200,
-            ribbonCount      : 3,
-            strokeSize       : 0,
-            parallaxAmount   : -0.2,
-            animateSections  : true
-        },
-
-        HomeHeaderImage : [
-            
-                'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpg',
-            
-                'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpeg',
-            
-        ],
-        HomeBannerText  : '',
-
-        ArticleHeaderImage : [
-            
-                'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/article.jpg',
-            
-        ],
-
-        OtherBannerText : '',
-
-        MenuList : [
-            
-                {
-                    name   : '首页',
-                    href   : '/',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '标签',
-                    href   : '/tag',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '分类',
-                    href   : '/category',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '归档',
-                    href   : '/archive',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '赞赏',
-                    href   : '/donate',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '关于',
-                    href   : '/about',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '订阅',
-                    href   : '/atom.xml',    
-                    target : '_blank',
-                    class  : ''
-                },
-            
-                {
-                    name   : '搜索',
-                    href   : '',    
-                    target : '',
-                    class  : 'search'
-                },
-            
-                {
-                    name   : '留言板',
-                    href   : '/comment',    
-                    target : '',
-                    class  : ''
-                },
-            
-                {
-                    name   : '友情链接',
-                    href   : '/friend',    
-                    target : '',
-                    class  : ''
-                },
-            
-        ],
-        MenuLink : [
-            
-                
-                    {
-                        icon : 'icon-weibo', 
-                        url  : ''
-                    },
-                
-                    {
-                        icon : 'icon-wechat', 
-                        url  : ''
-                    },
-                
-                    {
-                        icon : 'icon-qq', 
-                        url  : ''
-                    },
-                
-                    {
-                        icon : 'icon-github', 
-                        url  : 'https://github.com/first19326'
-                    },
-                
-            
-        ],
-
-        FooterStyle : 2,
-        BottomText  : {
-            icon    : 'like-fill',
-            left    : '人生若只如初见',
-            right   : '何事秋风悲画扇'
-        },
-        ThemeInfo   : true,
-
-        ConsoleList : [
-            
-                
-                    [
+                      </div>
+                      
+                      <!-- <div id="cyReward" class="text-center margin-top" role="cylabs" data-use="reward"></div> -->
                         
-                            
-                                'Based on cnblogs theme SimpleMemory.',
-                            
-                                '',
-                            
-                        
-                    ],
-                
-                    [
-                        
-                            
-                                'SimpleMemory Author:',
-                            
-                                'BNDong',
-                            
-                        
-                    ],
-                
-                    [
-                        
-                            
-                                'Theme:',
-                            
-                                'LiveForCode',
-                            
-                        
-                    ],
-                
+          </div>
+          <footer class="panel-foot clearfix">
             
-        ],
-
-        FontIconExtend : '',
-
-        Donate : {
-            paypal  : '',
-            bitcoin : '',
-            alipay  : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png',
-            wechat  : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png'
-        },
-
-        Code : {
-            style : 'normal'
-        },  
-
-        Search : {
-            applicationID : '010C3EANT8',
-            apiKey        : 'c7abab9f11b79102b9aff7fe6d41447d',
-            indexName     : 'Notes',
-            hits          : {
-                page : 10
-            },
-            labels        : {
-                placeholder : '搜索',
-                empty       : '未发现与 「${query}」 相关的内容',
-                stats       : '${hits} 条相关条目，使用了 ${time} 毫秒',
-            }
-        }, 
-
-        Valine : {
-            switch         : true,
-            el             : '.comments-content',
-            appId          : 'srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz',
-            appKey         : '8uVSP1q6UlALVC5igYfIfv2h',
-            placeholder    : '你是我一生只会遇见一次的惊喜...',
-            avatar         : 'mm',
-            meta           : 'nick,mail,link',
-            requiredFields : 'nick,mail',
-            pageSize       : 5,
-            lang           : 'zh-cn',
-            visitor        : true,
-            enableQQ       : true
-        },
-
-        Tocbot : {
-            switch                : true,
-            tocSelector           : '.toc',
-            contentSelector       : '.article-body',
-            headingSelector       : 'h1, h2, h3, h4, h5',
-            headingsOffset        : 0,
-            scrollSmooth          : true,
-            scrollSmoothOffset    : -5,
-            positionFixedSelector : '.toc',
-            positionFixedClass    : 'toc-fixed',
-            fixedSidebarOffset    : '',
-        },
-
-        Require : {
-            baseUrl     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/',
-            waitSeconds : 100
-        },
-
-        Music : {
-            type : 'Meting'
-        },
-        APlayer : {
-            container : '.aplayer',
-            fixed     : true,
-            autoplay  : false,
-            loop      : 'all',
-            order     : 'random',
-            preload   : 'auto',
-            volume    : 0.67,
-            mutex     : true,
-            lrcType   : 3,
-            audio     : [
-                
-                    {
-                        name   : 'aLIEz',
-                        artist : 'mizuki（瑞葵）',
-                        cover  : '/music/cover/aLIEz.jpg',
-                        url    : '/music/song/aLIEz.mp3',
-                        lrc    : '/music/lrc/aLIEz.lrc'
-                    },
-                
-                    {
-                        name   : 'Endless Tears',
-                        artist : 'CLIFF EDGE',
-                        cover  : '/music/cover/Endless Tears.jpg',
-                        url    : '/music/song/Endless Tears.mp3',
-                        lrc    : '/music/lrc/Endless Tears.lrc'
-                    },
-                
-                    {
-                        name   : 'Miracle',
-                        artist : 'Cascada',
-                        cover  : '/music/cover/Miracle.jpg',
-                        url    : '/music/song/Miracle.mp3',
-                        lrc    : '/music/lrc/Miracle.lrc'
-                    },
-                
-                    {
-                        name   : 'Roll The Dice',
-                        artist : '高珊',
-                        cover  : '/music/cover/Roll The Dice.jpg',
-                        url    : '/music/song/Roll The Dice.mp3',
-                        lrc    : '/music/lrc/Roll The Dice.lrc'
-                    },
-                
-                    {
-                        name   : 'See You Again',
-                        artist : 'Charlie Puth, Wiz Khalifa',
-                        cover  : '/music/cover/See You Again.jpg',
-                        url    : '/music/song/See You Again.mp3',
-                        lrc    : '/music/lrc/See You Again.lrc'
-                    },
-                
-                    {
-                        name   : 'Traveling Light',
-                        artist : 'Joel Hanson, Sara Groves',
-                        cover  : '/music/cover/Traveling Light.jpg',
-                        url    : '/music/song/Traveling Light.mp3',
-                        lrc    : '/music/lrc/Traveling Light.lrc'
-                    },
-                
-                    {
-                        name   : '痴心绝对',
-                        artist : '李圣杰',
-                        cover  : '/music/cover/痴心绝对.jpg',
-                        url    : '/music/song/痴心绝对.mp3',
-                        lrc    : '/music/lrc/痴心绝对.lrc'
-                    },
-                
-                    {
-                        name   : '好想大声说爱你',
-                        artist : 'BAAD（バード）',
-                        cover  : '/music/cover/好想大声说爱你.jpg',
-                        url    : '/music/song/好想大声说爱你.mp3',
-                        lrc    : '/music/lrc/好想大声说爱你.lrc'
-                    },
-                
-            ]
-        },
-        Meting : {
-            id       : '3778678', 
-            lrcshow  : false, 
-            server   : 'netease', 
-            type     : 'playlist', 
-            fixed    : true, 
-            autoplay : false, 
-            loop     : 'all', 
-            order    : 'random', 
-            preload  : 'auto', 
-            volume   : 0.67, 
-            mutex    : true
-        },
-
-        LazyLoad : {
-            default : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/lazyload.svg'
-        },
+              
+          </footer>
+  </div>
   
-        Style : {
-            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/APlayer.css',
-            archive          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/archive.css',
-            donate           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css',
-            fancybox         : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css',
-            footer           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css',
-            iconfont         : 'https://at.alicdn.com/t/font_1546312_l3yohatebw.css',
-            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css',
-            menuBubble       : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css',
-            page             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css',
-            post             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css',
-            search           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css',
-            tocbot           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css',
-            normal           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css',
-            night            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/night.css',
-            clipboard        : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/clipboard.css'
-        },
-
-        Script: {
-            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js',
-            config           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.config.js',
-            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js',
-            instantSearch    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js',
-            jQuery           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js',
-            loading          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js',
-            meting           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js',
-            iscroll          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js',
-            require          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js'
-        },
-
-        Font: {
-            LongCang   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css',
-            Monda      : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css',
-            NotoSansSC : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css',
-            Playball   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css',
-            PTMono     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css',
-            RobotoSlab : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css',
-            Rosario    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css',
-            UbuntuMono : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css'
-        },
-
-        Suffix : {
-            about : '简单地活着, 肆意又精彩.'
-        },
+    
+  <ul class="pager margin clearfix border-main">
+    
+      <li class="float-left">
+        <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/">
             
-        Theme : {
-            url  : 'https://github.com/first19326/Hexo-LiveForCode',
-            name : 'Hexo - Live For Code'
-        }  
-    };
+                  (no title)
+                  
+        </a>
+      </li>
+      
+        
+  </ul>
+  
+      
+</article>
+
+
+            </section>
+          </div>
+          <div class="xs3">
+            
+              <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="panel margin-right margin-top">
+    <div class="panel-head bg-main">Archives</div>
+    <div class="panel-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="panel margin-right margin-top">
+    <div class="panel-head bg-main">Recent Posts</div>
+    <div class="list-link" style="border-radius:0px;">
+        
+            <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/">(no title)</a>
+        
+            <a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/">[object Object]</a>
+        
+    </div>
+  </div>
+
+  
+</aside>
+                
+          </div>
+        </div>
+        <footer id="footer">
+  
+  <!-- <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div> -->
+  <div class="container-layout bg-gray bg-inverse padding-big-top padding-big-bottom margin-top">
+    <div class="table-responsive padding hidden-l">
+        <ul class="nav nav-sitemap">
+            <li><a href="#">友情链接</a>
+                <ul>
+                    <li><a target="_blank" rel="noopener" href="https://developer.android.com/">Android Developer</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://www.kotlincn.net/">Kotlin中文网</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://developer.apple.com/">Apple Developer</a></li>
+                </ul>
+            </li>
+            <li><a href="#">微信公众号</a>
+                <img width="128" height="128" src="/qrcode.jpg" class="img-border border-blue radius-big" />
+            </li>
+            <li><a href="#">联系方式</a> 
+                <ul>
+                    <li>QQ：1830702951</li>
+                    <li>微信：codeteenager</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="text-center">
+        版权所有 © jiangshuaijie.com All Rights Reserved，京ICP备17065332号</div>
+</div>
+</footer>
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+            var $searchDialog = document.getElementById("search_dialog");
+            $searchDialog.addEventListener("click",function(){
+                // 搜索功能
+                var searchXml = "";
+                if (searchXml.length == 0) {
+                    searchXml = "search.xml";
+                }
+                var searchPath = "/" + searchXml;
+                initSearch(searchPath, 'search-input', 'search-result','search');
+            });
+            
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, input_id, content_id,search_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(input_id);
+                    var $search = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $search.addEventListener('click', function() {
+                        var str = '<ul class=\"list-group\">';
+                        var keywords = $input.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if ($input.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class='text-main'>" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='text-main'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class='text-main'>" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
 </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js"></script>
-</body>
-</html>
+
+<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cytsiKqIU"></script>
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?type=left&amp;move=0" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+          <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+        
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+ -->
+    </div>
+  </body>
+
+  </html>
