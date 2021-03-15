@@ -1,86 +1,281 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
 <!DOCTYPE html>
-<html>
+<html class="html-loading">
+		
+
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+       | Hexo
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
   
+<link rel="stylesheet" href="/css/Annie.css">
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript——顺序表、链表 时间：2020-01-19 21:40:56 7次访问  JavaScript 顺序表与链表1. 顺序表(数组) 顺序表是在计算机内存中以数组的形式保存的线性表，是指用一组地址连续的存储单元依次存储数据元素的线性结构。线性表采用顺序存储的方式存储就称之为顺序表。顺序表是将表中的结点依次存放在计算机内存中一组地址连续的存储单元中  顺序表的优点：存储的数据是连续">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JavaScript——顺序表、链表 时间：2020-01-19 21:40:56 7次访问  JavaScript 顺序表与链表1. 顺序表(数组) 顺序表是在计算机内存中以数组的形式保存的线性表，是指用一组地址连续的存储单元依次存储数据元素的线性结构。线性表采用顺序存储的方式存储就称之为顺序表。顺序表是将表中的结点依次存放在计算机内存中一组地址连续的存储单元中  顺序表的优点：存储的数据是连续">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://wait1997.github.io/2020/01/19/image/%E9%93%BE%E8%A1%A8/%E5%8D%95%E9%93%BE%E8%A1%A8.png">
-<meta property="article:published_time" content="2021-03-11T07:49:25.464Z">
-<meta property="article:modified_time" content="2021-03-11T10:33:06.464Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wait1997.github.io/2020/01/19/image/%E9%93%BE%E8%A1%A8/%E5%8D%95%E9%93%BE%E8%A1%A8.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
 
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: false,
+	  appId: 'AU8...',
+	  appKey: '4cU...',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
 <meta name="generator" content="Hexo 5.2.0"></head>
+	<body>
+		<!-- Preloader -->
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">Fetching...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-JavaScript——顺序表、链表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/" class="article-date">
-  <time datetime="2021-03-11T07:49:25.464Z" itemprop="datePublished">2021-03-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="JavaScript——顺序表、链表"><a href="#JavaScript——顺序表、链表" class="headerlink" title="JavaScript——顺序表、链表"></a>JavaScript——顺序表、链表</h3><ul>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「」
+		
+	</p>
+
+	
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="Catalog"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	Updated on
+
+	<a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/" itemprop="url">
+		<time datetime="2021-03-11T07:49:25.464Z" itemprop="dateUpdated">
+	  		2021-03-11
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+						
+			</span>
+			
+			
+
+
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<h3 id="JavaScript——顺序表、链表"><a href="#JavaScript——顺序表、链表" class="headerlink" title="JavaScript——顺序表、链表"></a>JavaScript——顺序表、链表</h3><ul>
 <li>时间：2020-01-19 21:40:56</li>
 <li>7次访问</li>
 </ul>
@@ -104,110 +299,383 @@
 <li>数组元素在栈区，链表元素在堆区;</li>
 <li>数组查询快、增删慢；链表增删快、查询慢</li>
 </ul>
-<h5 id="单链表js实现"><a href="#单链表js实现" class="headerlink" title="单链表js实现"></a>单链表<code>js</code>实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;** * 定义一个节点 * 分别存储data和下一个节点的地址next * 尾节点指向null 一个节点则next指向null *&#x2F;class Node &#123;  constructor(element) &#123;    this.element &#x3D; element;    this.next &#x3D; null;  &#125;&#125;&#x2F;** * 定义一个链表 *&#x2F;class LinkList &#123;  constructor() &#123;    &#x2F;&#x2F; 当前头节点    this.head &#x3D; new Node(&#39;head&#39;);  &#125;  &#x2F;&#x2F; 查找某一个元素  find(item) &#123;    let currentNode &#x3D; this.head;    while (currentNode.next !&#x3D;&#x3D; null &amp;&amp; currentNode.element !&#x3D;&#x3D; item) &#123;      currentNode &#x3D; currentNode.next;    &#125;    &#x2F;&#x2F; 如果没有找到则返回最后一个节点 一个节点则是头节点    return currentNode;  &#125;  &#x2F;&#x2F; 插入某一个元素  insert(newitem, item) &#123;    let newNode &#x3D; new Node(newitem);    let currentNode &#x3D; this.find(item);    newNode.next &#x3D; currentNode.next;    currentNode.next &#x3D; newNode;  &#125;  &#x2F;&#x2F; 查找某一个节点的前一个结点  preNode(item) &#123;    let currentNode &#x3D; this.head;    while (currentNode.next !&#x3D;&#x3D; null &amp;&amp; currentNode.next.element !&#x3D;&#x3D; item) &#123;      currentNode &#x3D; currentNode.next;    &#125;    return currentNode;  &#125;  &#x2F;&#x2F; 删除一个节点  remove(item) &#123;    let preNode &#x3D; this.preNode(item);    if (!(preNode.next &#x3D;&#x3D;&#x3D; null)) &#123;      preNode.next &#x3D; preNode.next.next;      &#x2F;&#x2F; return true;    &#125;    &#x2F;&#x2F; return false;  &#125;  &#x2F;&#x2F;修改一个节点  edit(item, newitem) &#123;    let node &#x3D; this.find(item);    node.element &#x3D; newitem;    &#x2F;&#x2F; return node;  &#125;  &#x2F;&#x2F; 输出所有节点的值  display() &#123;    let currentNode &#x3D; this.head;    &#x2F;&#x2F; 首先打印头节点的值    console.log(currentNode.element);    while (currentNode.next !&#x3D;&#x3D; null) &#123;      console.log(currentNode.next.element);      currentNode &#x3D; currentNode.next;    &#125;  &#125;  &#x2F;&#x2F; 判断链表中是否有循环  hasCircle() &#123;    &#x2F;&#x2F; 定义两个指针    let slowPoint &#x3D; this.head;    let fastPoint &#x3D; this.head;    while (fastPoint !&#x3D;&#x3D; null) &#123;      slowPoint &#x3D; slowPoint.next;      fastPoint &#x3D; fastPoint.next.next;      if (slowPoint &#x3D;&#x3D;&#x3D; fastPoint) &#123;        return true;      &#125;    &#125;    return false;  &#125;&#125;const linkList &#x3D; new LinkList();linkList.insert(&quot;A&quot;);linkList.insert(&quot;B&quot;);linkList.insert(&quot;C&quot;);&#x2F;&#x2F;测试单项链表是否有循环linkList.find(&quot;C&quot;).next &#x3D; linkList.find(&quot;A&quot;);console.log(linkList.hasCircle()); &#x2F;&#x2F; true&#x2F;&#x2F; linkList.display();</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/" data-id="ckma0voux0000r03gdyqd8x3b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">[object Object]</div>
-    </a>
-  
-</nav>
+<h5 id="单链表js实现"><a href="#单链表js实现" class="headerlink" title="单链表js实现"></a>单链表<code>js</code>实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;** * 定义一个节点 * 分别存储data和下一个节点的地址next * 尾节点指向null 一个节点则next指向null *&#x2F;class Node &#123;  constructor(element) &#123;    this.element &#x3D; element;    this.next &#x3D; null;  &#125;&#125;&#x2F;** * 定义一个链表 *&#x2F;class LinkList &#123;  constructor() &#123;    &#x2F;&#x2F; 当前头节点    this.head &#x3D; new Node(&#39;head&#39;);  &#125;  &#x2F;&#x2F; 查找某一个元素  find(item) &#123;    let currentNode &#x3D; this.head;    while (currentNode.next !&#x3D;&#x3D; null &amp;&amp; currentNode.element !&#x3D;&#x3D; item) &#123;      currentNode &#x3D; currentNode.next;    &#125;    &#x2F;&#x2F; 如果没有找到则返回最后一个节点 一个节点则是头节点    return currentNode;  &#125;  &#x2F;&#x2F; 插入某一个元素  insert(newitem, item) &#123;    let newNode &#x3D; new Node(newitem);    let currentNode &#x3D; this.find(item);    newNode.next &#x3D; currentNode.next;    currentNode.next &#x3D; newNode;  &#125;  &#x2F;&#x2F; 查找某一个节点的前一个结点  preNode(item) &#123;    let currentNode &#x3D; this.head;    while (currentNode.next !&#x3D;&#x3D; null &amp;&amp; currentNode.next.element !&#x3D;&#x3D; item) &#123;      currentNode &#x3D; currentNode.next;    &#125;    return currentNode;  &#125;  &#x2F;&#x2F; 删除一个节点  remove(item) &#123;    let preNode &#x3D; this.preNode(item);    if (!(preNode.next &#x3D;&#x3D;&#x3D; null)) &#123;      preNode.next &#x3D; preNode.next.next;      &#x2F;&#x2F; return true;    &#125;    &#x2F;&#x2F; return false;  &#125;  &#x2F;&#x2F;修改一个节点  edit(item, newitem) &#123;    let node &#x3D; this.find(item);    node.element &#x3D; newitem;    &#x2F;&#x2F; return node;  &#125;  &#x2F;&#x2F; 输出所有节点的值  display() &#123;    let currentNode &#x3D; this.head;    &#x2F;&#x2F; 首先打印头节点的值    console.log(currentNode.element);    while (currentNode.next !&#x3D;&#x3D; null) &#123;      console.log(currentNode.next.element);      currentNode &#x3D; currentNode.next;    &#125;  &#125;  &#x2F;&#x2F; 判断链表中是否有循环  hasCircle() &#123;    &#x2F;&#x2F; 定义两个指针    let slowPoint &#x3D; this.head;    let fastPoint &#x3D; this.head;    while (fastPoint !&#x3D;&#x3D; null) &#123;      slowPoint &#x3D; slowPoint.next;      fastPoint &#x3D; fastPoint.next.next;      if (slowPoint &#x3D;&#x3D;&#x3D; fastPoint) &#123;        return true;      &#125;    &#125;    return false;  &#125;&#125;const linkList &#x3D; new LinkList();linkList.insert(&quot;A&quot;);linkList.insert(&quot;B&quot;);linkList.insert(&quot;C&quot;);&#x2F;&#x2F;测试单项链表是否有循环linkList.find(&quot;C&quot;).next &#x3D; linkList.find(&quot;A&quot;);console.log(linkList.hasCircle()); &#x2F;&#x2F; true&#x2F;&#x2F; linkList.display();</span><br></pre></td></tr></table></figure>	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
 
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
-    </div>
-  </div>
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">Related post</div>
+					<div>Comment</div>
+					<div>Share</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">To Top</a>
+		
+		
+			<a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/" title="[object Object]" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/03/11/JavaScript%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E3%80%81%E9%93%BE%E8%A1%A8/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/">[object Object]</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/" title="[object Object]">
+								[object Object]			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 30日, 2020				
+							</p>
+							<p class="relate-post-content">
+								这次想要分享的一篇文章是：从一个奇怪的错误出发理解Vue的基本概念。
+这篇文章以Vue的两种构建方式做为切入点，深入探讨了Vue的基本概念，编译以及挂载的相关过程。
+在这篇文章里学到很多以前忽略的地方:
+开始学习vue的时候，由于有一...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/10/30/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E9%A1%B5/" title="[object Object]">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="https://w.wallhaven.cc/full/43/wallhaven-43zy96.jpg" alt="[object Object]"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+		<div class="config-info">
+			Please check the parameter of <b>comment</b> in config.yml of hexo-theme-Annie!
+		</div>	
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">Home</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">Archive</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">Category</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">Tag</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">About</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">Gallery</a>
+		</li>
+		
+	
+
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2021, content by Sariay. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
 </footer>
-    </div>
-    <nav id="mobile-nav">
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
 
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
+	</body>	
 </html>
